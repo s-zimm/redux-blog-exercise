@@ -6,11 +6,12 @@ const initialState = data;
 const posts = (state = initialState, action) => {
     switch (action.type) {
         case 'GET_ALL_POSTS':
-            return { posts: initialState }
+            return initialState
         
         case 'GET_SINGLE_USER_POSTS':
-            return { posts: initialState.filter(post => post.userId === action.payload)}
+            return initialState.filter(post => post.userId === action.payload)
     }
+    return initialState;
 }
 
 export default combineReducers({
