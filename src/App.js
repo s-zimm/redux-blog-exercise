@@ -7,6 +7,7 @@ import BlogPageContainer from './components/BlogPageContainer';
 import Navbar from './components/Navbar';
 import ScreenDumb from './components/ScreenDumb';
 import ScreenContainer from './components/ScreenContainer';
+import NewBlog from './components/NewBlog';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers/reducers';
@@ -40,15 +41,9 @@ class App extends Component {
     return (
       <Provider store={this.store}>
         <div>
-          {/* <Router>
-            <div className="App">
-              <Navbar />
-              <Route path="/blogs/:userId" component={BlogPage} />
-              <Route exact path="/blogs" component={BlogPage} />
-
-            </div>
-          </Router> */}
+          
           <Navbar />
+          <NewBlog />
           <BlogPageContainer />
           {/* <ScreenContainer /> */}
 

@@ -10,10 +10,25 @@ const posts = (state = initialState, action) => {
         
         case 'GET_SINGLE_USER_POSTS':
             return initialState.filter(post => post.userId === action.payload)
+
+        case 'CREATE_NEW_POST':
+            return initialState.concat([action.payload])
     }
     return initialState;
 }
 
+const newPostData = (state, action) => {
+    switch (action.type) {
+        case 'HANDLE_TEXTAREA_CHANGE':
+            return { ...state, textarea: action.payload}
+
+        case 'HANDLE_USER_CHANGE':
+            return { ...state, userId: action.payload }
+    }
+    return { textarea: '', userId: null, title: '' }
+}
+
 export default combineReducers({
-    posts
+    posts,
+    newPostData
 });

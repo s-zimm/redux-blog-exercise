@@ -52,23 +52,23 @@ let action = { type: 'CREATE_POST' };
 //     }
 // }
 
-const ScreenDumb = ({ dispatch, posts }) => {
-    return (
-        <div>
-            <p>{posts.toString()}</p>
-            <button onClick={() => dispatch({ type: 'CREATE_POST' })}>Click</button>
-        </div>
-    )
-}
+// const ScreenDumb = ({ dispatch, posts }) => {
+//     return (
+//         <div>
+//             <p>{posts.toString()}</p>
+//             <button onClick={() => dispatch({ type: 'CREATE_POST' })}>Click</button>
+//         </div>
+//     )
+// }
 
-let Screen = connect(
-    (state) => {
-        return { posts: state.posts }
-    },
-    (dispatch) => {
-        return { dispatch: dispatch }
-    }
-)(ScreenDumb)
+// let Screen = connect(
+//     (state) => {
+//         return { posts: state.posts }
+//     },
+//     (dispatch) => {
+//         return { dispatch: dispatch }
+//     }
+// )(ScreenDumb)
     
 
 ReactDOM.render(<App />, document.getElementById('root'));
