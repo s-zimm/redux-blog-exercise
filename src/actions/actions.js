@@ -1,3 +1,5 @@
+export const GET_ALL_POSTS = 'GET_ALL_POSTS';
+
 export const actionGetAllPosts = () => ({
     type: 'GET_ALL_POSTS'
 });
@@ -19,5 +21,10 @@ export const actionHandleTextareaChange = (value) => ({
 
 export const actionHandleSelectUser = (value) => ({
     type: 'HANDLE_USER_CHANGE',
+    payload: value
+});
+
+export const actionHandleTitleChange = (value) => ({
+    type: 'HANDLE_TITLE_CHANGE',
     payload: value
 });
